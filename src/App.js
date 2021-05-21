@@ -11,7 +11,7 @@ function App() {
       
         <Navbar.Brand >
           <img src={logo} width="40px" height="40px" />{'      '}
-          Logo 
+          SMS 
         </Navbar.Brand>
 
         <Navbar.Toggle/>
