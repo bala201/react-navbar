@@ -1,13 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css'
-import ReactPlayer from 'react-player'
+
 import {Navbar,Nav,NavDropdown} from 'react-bootstrap'
+import Home from './Home';
 function App() {
   return (
     <div className="App">
     
-      <Navbar bg="danger" variant="dark" sticky="top" expand="sm" collapseOnSelect>
+      <Navbar bg="secondary" variant="dark" sticky="top" expand="sm" collapseOnSelect>
       
         <Navbar.Brand >
           <img src={logo} width="40px" height="40px" />{'      '}
@@ -17,48 +18,38 @@ function App() {
         <Navbar.Toggle/>
         <Navbar.Collapse>
         <Nav>
-          <NavDropdown title="Products">
+          <NavDropdown title="Academic Year">
           
-          <NavDropdown.Item href="#products/tea">Tea</NavDropdown.Item>
-          <NavDropdown.Item href="#products/coffee">Coffee</NavDropdown.Item>
-          <NavDropdown.Item href="#products/badham">Badham</NavDropdown.Item>
+          <NavDropdown.Item href="#year/21">2021</NavDropdown.Item>
+          <NavDropdown.Item href="#year/20">2020</NavDropdown.Item>
+          <NavDropdown.Item href="#year/19">2019</NavDropdown.Item>
           <NavDropdown.Divider/>
-          <NavDropdown.Item href="#products/boost">Boost</NavDropdown.Item>
+              <NavDropdown.Item href="#year/previous">Previous</NavDropdown.Item>
 
           </NavDropdown>
-        <Nav.Link href="#products">Blog</Nav.Link>
-        <Nav.Link href="#products">About Us</Nav.Link>
-        <Nav.Link href="#products">Contact Us</Nav.Link>
+        <Nav.Link href="#student">Student</Nav.Link>
+        <Nav.Link href="#marks">Marks</Nav.Link>
+        <Nav.Link href="#attendance">Attendance</Nav.Link>
+        <Nav.Link href="#projects">Projects</Nav.Link>
+
+        
+        <input type="text" placeholder="Search.." name="search"></input>
+       
+        
         </Nav>
+         
         </Navbar.Collapse>
-      
+        
+        <div>
+        <button class="btn btn-success" align="center">Admin</button>{' '}
+        
+        </div>
+       
+        
       </Navbar>
-      <div>
 
-        <ReactPlayer controls width="1000px" height="1000px" url="https://youtu.be/vlDzYIIOYmM" />
+      <Home/>
       
-      </div>
-      <div className="content">
-      Hi
-      </div>
-      <div>
-      <img src="https://nettv4u.com/imagine/31-01-2019/pavithra.jpg" alt="..." class="rounded-bottom"></img>
-      </div>
-
-      <div className="content">
-      Hi
-      </div>
-      <div>
-      <img src="https://wallpapercave.com/wp/wp2596622.jpg" alt="..." class="rounded-bottom"></img>
-      </div>
-
-      <div className="content">
-      Hi
-      </div>
-      <div>
-      <img src="https://cdn.icowboysradio.com/cuckooradio/uploads/2021/02/5-min-8.jpg" alt="..." class="rounded-bottom"></img>
-      </div>
-
     </div>
   );
 }
